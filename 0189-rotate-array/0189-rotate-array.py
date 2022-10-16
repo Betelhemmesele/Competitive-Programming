@@ -3,6 +3,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        k %= len(nums)
-        nums[k:], nums[:k] = nums[:-k], nums[-k:]
-        
+        temp=[0]*len(nums)
+        for i in range(0,len(nums)):
+            temp[(i+k)%len(nums)]=nums[i]
+        for i in range(0,len(nums)):
+            nums[i]=temp[i]
