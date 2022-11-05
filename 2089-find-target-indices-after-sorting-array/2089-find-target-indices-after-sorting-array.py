@@ -3,13 +3,10 @@ class Solution:
             n=len(nums)
             nums.sort()
             output=[]
-            for i in range(n):
-                if nums[i]==target:
+            for i in range(0,n):
+                if target==nums[i]:
                     output.append(i)
-            output.sort()
-            if output:
-                return output
-            else:
-                return []
+            return output
                 
+            
             
